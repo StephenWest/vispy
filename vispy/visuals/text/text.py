@@ -387,11 +387,8 @@ class TextVisual(Visual):
         self.pos = pos
         self.rotation = rotation
         self._text_scale = STTransform()
-<<<<<<< HEAD
-        
-=======
 
->>>>>>> 383fb73d1a97e640b365af9a2991f9594b73ab11
+
     @property
     def text(self):
         """The text string"""
@@ -469,7 +466,7 @@ class TextVisual(Visual):
         px_scale = (tr.map((1, 0)) - tr.map((0, 1)))[:2]
         self._program.vert['transform'] = transforms.get_full_transform()
         self._text_scale.scale = px_scale * n_pix
-        
+
         self._program.vert['text_scale'] = self._text_scale
         self._program['u_npix'] = n_pix
         self._program['u_kernel'] = self._font._kernel
