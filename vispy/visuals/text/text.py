@@ -388,7 +388,6 @@ class TextVisual(Visual):
         self.rotation = rotation
         self._text_scale = STTransform()
 
-
     @property
     def text(self):
         """The text string"""
